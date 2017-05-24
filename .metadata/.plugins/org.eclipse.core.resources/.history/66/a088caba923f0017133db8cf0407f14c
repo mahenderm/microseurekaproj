@@ -1,0 +1,12 @@
+package com.newt.pojo;
+
+public class Adhar {
+	private int aId;
+	private String aName;
+	private int aage;
+	
+	
+	
+	
+
+}

@@ -1,0 +1,6 @@
+package com.newt.pojo;
+
+public class Passport {
+	private int pid;
+	
+}

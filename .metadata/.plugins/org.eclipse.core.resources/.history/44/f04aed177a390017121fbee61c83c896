@@ -1,0 +1,17 @@
+package com.newt.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/product")
+public class ProductController {
+	@RequestMapping(method=RequestMethod.GET,value="/cart/items")
+	public String main(){
+		return "Hello Mahi";
+		
+	}
+	
+
+}

@@ -1,0 +1,20 @@
+package com.newt.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ProductController {
+	@RequestMapping(method=RequestMethod.GET,value="/products")
+	public String getProducts(){
+		return "list of all products"    
+				
+				+ "Nokia"      
+				+ "SamSung"      
+				+ "Lenovo";     
+		
+	}
+	
+
+}

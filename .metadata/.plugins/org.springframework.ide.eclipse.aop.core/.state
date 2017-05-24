@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="product-service"/>
+<aop-project name="cart-service"/>
+<aop-project name="springbootapp"/>
+<aop-project name="ECommerce-master"/>
+<aop-project name="SpringBootMongoDB"/>
+<aop-project name="spring4-restful-example-master"/>
+<aop-project name="democlient"/>
+<aop-project name="productCart"/>
+<aop-project name="EurekaServer"/>
+</aop-reference-model>

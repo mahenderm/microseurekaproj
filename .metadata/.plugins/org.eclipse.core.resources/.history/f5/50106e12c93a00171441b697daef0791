@@ -1,0 +1,38 @@
+package com.newt.model;
+
+import java.io.Serializable;
+
+import org.springframework.http.HttpStatus;
+
+
+
+public class Response<T> implements Serializable {
+	private T content;
+	private String code;
+	private HttpStatus httpStatus;
+	public T getContent() {
+		return content;
+	}
+	public void setContent(T content) {
+		this.content = content;
+	}
+	public String getCode() {
+		return code;
+	}
+	public void setCode(String code) {
+		this.code = code;
+	}
+	public HttpStatus getHttpStatus() {
+		return httpStatus;
+	}
+	public void setHttpStatus(HttpStatus httpStatus) {
+		this.httpStatus = httpStatus;
+	}
+	@Override
+	public String toString() {
+		return "Response [content=" + content + ", code=" + code + ", httpStatus=" + httpStatus + "]";
+	}
+	
+	
+
+}

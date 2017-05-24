@@ -1,0 +1,87 @@
+
+/*
+ * Mahender Muthyala
+ */
+package com.newt.controller;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+
+import com.newt.pojo.Product;
+import com.newt.pojo.Response;
+import com.newt.pojo.StatusCode;
+
+
+@RestController
+@RequestMapping("/demo")
+public class HelloController {
+	String message = "Well come to my world...";
+	//String message = null;
+	 @SuppressWarnings({ "rawtypes", "unchecked" })
+	@RequestMapping(value = "/status", method = RequestMethod.GET, produces=javax.ws.rs.core.MediaType.APPLICATION_JSON)
+	
+	public ResponseEntity<Response> home(){
+		 
+		Response response = new Response();
+		if(message != null) {
+			response.setContent(message);
+			response.setStatus(StatusCode.U200);
+			return new ResponseEntity<Response>(response, response.getHttpStatus());
+			
+		}
+		else {
+			response.setStatus(StatusCode.E400);
+            return new ResponseEntity<Response>(response, HttpStatus.BAD_REQUEST);
+			
+		}
+		
+		
+	}
+	 
+	 @SuppressWarnings({ "rawtypes", "unchecked" })
+	@RequestMapping(value = "/product", method = RequestMethod.GET, produces=javax.ws.rs.core.MediaType.APPLICATION_JSON)
+	public ResponseEntity<Response> product(){
+		Response response = new Response();
+		
+		Product product = new Product();
+		product.setPid(1);
+		product.setPname("Nokia");
+		product.setPprice("50");
+		if(message != null) {
+			response.setContent(product);
+			response.setStatus(StatusCode.U200);
+			return new ResponseEntity<Response>(response, response.getHttpStatus());
+			
+		}
+		else {
+			response.setStatus(StatusCode.E400);
+            return new ResponseEntity<Response>(response, HttpStatus.BAD_REQUEST);
+			
+		}
+		
+		
+	}
+	 
+		@RequestMapping(value = "/status", method = RequestMethod.GET, produces=javax.ws.rs.core.MediaType.APPLICATION_JSON)
+		
+		public ResponseEntity<Response> home1(){
+			 
+			Response response = new Response();
+			if(message == null) {
+				response.setContent(message);
+				response.setStatus(StatusCode.U200);
+				return new ResponseEntity<Response>(response, response.getHttpStatus());
+				
+			}
+			else {
+				response.setStatus(StatusCode.E400);
+	            return new ResponseEntity<Response>(response, HttpStatus.BAD_REQUEST);
+				
+			}
+			
+			
+		}
+
+}

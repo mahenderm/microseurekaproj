@@ -1,0 +1,19 @@
+package com.newt.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class CartController {
+	
+	@RequestMapping(method=RequestMethod.GET,value="/cart/items")
+	public String getCartItems(){
+		return "list of all products in cart"
+				+ "Nokia"
+				+ "SamSung"
+				+ "Lenovo";
+		
+	}
+
+}

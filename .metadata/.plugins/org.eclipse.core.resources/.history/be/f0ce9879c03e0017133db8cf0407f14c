@@ -1,0 +1,14 @@
+package com.newt.service;
+
+import java.util.Hashtable;
+
+import org.springframework.stereotype.Service;
+
+import com.newt.model.Employee;
+
+@Service
+public class EmpService {
+	
+	Hashtable<String, Employee> hashTable = new Hashtable<String, Employee>();
+
+}

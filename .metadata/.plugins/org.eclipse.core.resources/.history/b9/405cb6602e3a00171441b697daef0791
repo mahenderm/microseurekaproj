@@ -1,0 +1,5 @@
+package com.newt.model;
+
+public class Response {
+
+}

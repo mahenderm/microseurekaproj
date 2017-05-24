@@ -1,0 +1,27 @@
+package com.newt.pojo;
+
+public class Snippet {
+	String message = "Well come to my world...";
+		//String message = null;
+		 @SuppressWarnings({ "rawtypes", "unchecked" })
+		@RequestMapping(value = "/status", method = RequestMethod.GET, produces=javax.ws.rs.core.MediaType.APPLICATION_JSON)
+		
+		public ResponseEntity<Response> home(){
+			 
+			Response response = new Response();
+			if(message != null) {
+				response.setContent(message);
+				response.setStatus(StatusCode.U200);
+				return new ResponseEntity<Response>(response, response.getHttpStatus());
+				
+			}
+			else {
+				response.setStatus(StatusCode.E400);
+	            return new ResponseEntity<Response>(response, HttpStatus.BAD_REQUEST);
+				
+			}
+			
+			
+		}
+}
+
